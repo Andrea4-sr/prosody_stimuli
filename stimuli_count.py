@@ -68,26 +68,25 @@ def extract_groups_between_four(data, new_group = []):
 # In[7]:
 
 
-def middle_break_4(data, new_group=[], first=int, last=int):
+def middle_break_4(data, new_group=[]):
     
     row_iterator = data.iterrows()
     for i, row in row_iterator: #for index, row in row_iterator
         
         if row['Break_Level_Annotation'] == '4':
-            first == row['Break_Level_Annotation']
-            new_group.append(first)
-            
-            first == last 
-            
+            new_group.append(row['Break_Level_Annotation'])
+
             new_group=[]
-            new_group.append(last)
+            new_group.append(row['Break_Level_Annotation'])
             
             groups.append(new_group)
             
         if row['Break_Level_Annotation'] != '4':
             new_group.append(row['Break_Level_Annotation'])
         
-            
+            if row['Break_Level_Annotation'] == '4':
+                new_group.append(row['Break_Level_Annotation'])
+                
     return groups
 
 
