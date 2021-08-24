@@ -94,7 +94,7 @@ def middle_break_4(data, new_group=[], first=int, last=int):
 # In[8]:
 
 
-def middle_break_3(phrases, dict_count={}, count=0): 
+def middle_break_3(phrases, dict_count={}, stimuli_groups=[], count=0): 
     
     for idx,item in enumerate(groups):
         count = item.count('3')+item.count('3-')
@@ -103,6 +103,7 @@ def middle_break_3(phrases, dict_count={}, count=0):
     for key,value in list(dict_count.items()):
         if value[0] != 1:
             del dict_count[key]
+    
             
     return dict_count, len(dict_count)
 
