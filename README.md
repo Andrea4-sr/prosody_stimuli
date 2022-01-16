@@ -1,5 +1,4 @@
 # prosody_stimuli
-Prosody Scripts Readme
 
 This project works to detect and extract different stimuli groups of two kinds: prosodic boundary breaks and lexical breaks (within word and across word breaks).
 
@@ -38,5 +37,8 @@ to run from terminal: python3 loss_lexical_task.py (or loss_protosyntax_task.py)
 6 ) insert_pauses.py 
 
 to run from terminal: python3 insert_pauses.py  /path/with/chosen_pairs_after_loss.csv /path/to/sliced_stimuli/*.wav /path/to/save/stimuli_pairs_with_inserted_pause/
-    
+
+7 ) gold_csv.py
+
+to run from terminal: python3 gold_csv.py /path/to/annotation/files/*.extension /path/to/chosen_pairs.csv /path/to/stored_stimuli_pairs/
 
