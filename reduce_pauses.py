@@ -69,7 +69,7 @@ def crossfade_wav_files_per_pause(dictionary_of_pauses_per_stimuli,outdir):
             for pause in pauses: 
                 pause_onset=pause[0]
                 pause_offset=pause[1]
-                new_audio=reduce_pause(audio_wav, pause_offset, pause_onset, crossfade=5)
+                new_audio=reduce_pause(audio_wav, pause_onset, pause_offset, crossfade=5)
                 new_audio.export(new_path, format="wav")
 
 
